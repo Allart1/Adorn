@@ -1,7 +1,15 @@
+img {
+    max-width: 100%;
+}
+
 .banner {
-    height: 500px;
+    height: 200px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #d5c6c1;
+}
+
+.banner--large {
+    height: 500px;
 }
