@@ -45,7 +45,7 @@
     <main>
         <section>
             <div class="banner banner--large" style="background-image: url(https://adorn.qodeinteractive.com/wp-content/uploads/2017/05/slider-h5-img-2.jpg);">
-                <div class="banner__container">
+                <div class="banner__container banner__dark-bg">
                     <h1 class="banner__heading">The Premium Items</h1>
                     <p class="banner__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     <a class="button banner__button" href="#">Shop now</a>
@@ -165,16 +165,20 @@
         </section>
         <section>
             <div class="container container--sm">
-                <h2>Subscribe to our newsletter</h2>
+                <h3>Subscribe to our newsletter</h3>
                 <form action="#" method="post">
                     <div class="row">
                         <div class="column">
                             <!-- <label for="unikaalneemail">emaili aadress</label> -->
-                            <input type="email" name="subscriberemail" id="unikaalneemail">
+                            <input placeholder="kati@maasikas.ee" type="email" name="subscriberemail" id="unikaalneemail">
                         </div>
                         <div class="column">
                             <input type="submit" value="Saada">
                         </div>
+                    </div>
+                    <div class="row">
+                        <input type="checkbox" name="approve" id="approve" value="true">
+                        <label for="approve">Nõustun isikuinfot jagama</label>
                     </div>
                 </form>
             </div>

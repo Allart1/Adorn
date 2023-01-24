@@ -1,3 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 35px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 34px;
+    margin-bottom: 14px;
+}
+
+h3 {
+    font-size: 30px;
+    margin-bottom: 14px;
+}
+
+h4 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+h5 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+h6 {
+    font-size: 18px;
+}
+
+p {
+    font-size: 17px;
+}
+
 img {
     max-width: 100%;
 }
@@ -12,4 +52,20 @@ img {
 
 .banner--large {
     height: 500px;
+}
+
+.banner__dark-bg {
+    color: white;
+}
+
+.thumbnail {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.menu__link {
+    padding: 5px 0;
+    display: inline-block;
+    font-size: 15px;
+    line-height: 27px;
 }
