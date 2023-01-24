@@ -4,6 +4,23 @@
     box-sizing: border-box;
 }
 
+
+/* font-family: 'Inconsolata', monospace;
+font-family: 'Playfair Display', serif;
+font-family: 'Ubuntu', sans-serif; 
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Inconsolata', monospace;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
 h1 {
     font-size: 35px;
     margin-bottom: 16px;
@@ -36,10 +53,20 @@ h6 {
 
 p {
     font-size: 17px;
+    line-height: 30px;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 img {
     max-width: 100%;
+}
+
+.container {
+    max-width: 1730px px;
+    margin-left: auto;
+    margin-right: auto;
+    /* siin võiks olla selle asemel ka padding left 1px ja padding right 15px */
+    padding: 0 15px;
 }
 
 .banner {
@@ -61,6 +88,10 @@ img {
 .thumbnail {
     padding-top: 15px;
     padding-bottom: 15px;
+}
+
+.menu__list {
+    list-style-type: none;
 }
 
 .menu__link {
