@@ -84,6 +84,10 @@ img {
     max-width: 100%;
 }
 
+.desktop-only {
+    display: none;
+}
+
 .container {
     max-width: 173rem px;
     margin-left: auto;
@@ -93,7 +97,9 @@ img {
 }
 
 .banner {
-    height: 200px;
+    min-height: 50vh;
+    /* maksimaalne suururs kahest suurusest */
+    min-height: max (50vh, 300px);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -101,7 +107,7 @@ img {
 }
 
 .banner--large {
-    height: 500px;
+    height: calc(100vh - 100px);
 }
 
 .banner__dark-bg {
