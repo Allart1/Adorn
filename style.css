@@ -10,50 +10,73 @@ font-family: 'Playfair Display', serif;
 font-family: 'Ubuntu', sans-serif; 
 */
 
+
+/* siin arvutatakse fondi vaikesuurus (16px tavaliselt) ymber 10px peale, siis ta muutub meile rem vaartuse jaoks kordajaks */
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Inconsolata', monospace;
+    /* 1.7rem on enamikeljuhtudel 17px see korrutub htmli fondisuurusega mis on 10  1.7 X 10 = 17 pikslit mis on vajalik pikslite suurus */
+    font-size: 1.7rem;
+}
+
+::-webkit-input-placeholder {
+    /* Edge */
+    font-family: 'Inconsolata', monospace;
+}
+
+ :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    font-family: 'Inconsolata', monospace;
+}
+
+input::placeholder,
+input {
+    font-family: 'Inconsolata', monospace;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    font-family: 'Inconsolata', monospace;
     text-transform: uppercase;
     font-weight: 400;
+    margin-bottom: 0.46em;
 }
 
 h1 {
-    font-size: 35px;
-    margin-bottom: 16px;
-    text-transform: uppercase;
+    font-size: 3.5rem;
 }
 
 h2 {
-    font-size: 34px;
-    margin-bottom: 14px;
+    font-size: 3.4rem;
 }
 
 h3 {
-    font-size: 30px;
-    margin-bottom: 14px;
+    font-size: 3rem;
 }
 
 h4 {
-    font-size: 25px;
-    margin-bottom: 10px;
+    font-size: 2.5rem;
 }
 
 h5 {
-    font-size: 20px;
-    margin-bottom: 10px;
+    font-size: 2rem;
 }
 
 h6 {
-    font-size: 18px;
+    font-size: 1.8rem;
 }
 
 p {
-    font-size: 17px;
-    line-height: 30px;
+    font-size: 1.7rem;
+    /* reakõrgus on 1.76 korada suurem siin olevast fondi suurusest,line height puhuhl võib kirjutada ka ainult 1.76 */
+    line-height: 1.76em;
     font-family: 'Ubuntu', sans-serif;
 }
 
@@ -62,11 +85,11 @@ img {
 }
 
 .container {
-    max-width: 1730px px;
+    max-width: 173rem px;
     margin-left: auto;
     margin-right: auto;
     /* siin võiks olla selle asemel ka padding left 1px ja padding right 15px */
-    padding: 0 15px;
+    padding: 0 1.5rem;
 }
 
 .banner {
@@ -85,9 +108,14 @@ img {
     color: white;
 }
 
+.banner--playfair .banner__heading {
+    font-family: 'Playfair Display', serif;
+    text-transform: unset;
+}
+
 .thumbnail {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
 }
 
 .menu__list {
@@ -95,8 +123,8 @@ img {
 }
 
 .menu__link {
-    padding: 5px 0;
+    padding: 0.333em 0;
     display: inline-block;
-    font-size: 15px;
-    line-height: 27px;
+    font-size: 1.5rem;
+    line-height: 1.8em;
 }
