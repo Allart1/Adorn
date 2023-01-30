@@ -82,6 +82,7 @@ p {
 
 img {
     max-width: 100%;
+    height: auto;
 }
 
 .desktop-only {
@@ -114,14 +115,38 @@ img {
     color: white;
 }
 
+h1.banner__heading {
+    /* clamp võtab miinimumi, optimumi ja maksimumi ningi juhib suurust paindlikult vastavalt nendele suurustele */
+    font-size: clamp(3.5rem, 6vw, 6rem);
+}
+
 .banner--playfair .banner__heading {
     font-family: 'Playfair Display', serif;
     text-transform: unset;
 }
 
 .thumbnail {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    /* thumbnailile määran position realative, et thumbnail __hover position absolutega jääks sinna kinni */
+    position: relative;
+}
+
+.thumbanil__hover {
+    /* position absolute kinnitub kõige lähema position relative/fixed elemenfi külge */
+    position: absolute;
+    background-color: rgb(255 255 255 / 60%);
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+
+/* thumbnaili pilt peab olema display block tüüpi , et ei tekiks alla 3px ruumi */
+
+.thumbnail__img {
+    display: block;
 }
 
 .menu__list {
@@ -133,4 +158,33 @@ img {
     display: inline-block;
     font-size: 1.5rem;
     line-height: 1.8em;
+}
+
+.header-main {
+    background-color: white;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: auto;
+    padding: 3.6rem 0;
+}
+
+header.fixed {
+    position: fixed;
+}
+
+.logo__img {
+    max-width: 8.5rem;
+}
+
+.burger-menu {
+    width: 2rem;
+    border: none;
+    background-color: transparent;
+}
+
+.burger-menu__line {
+    border-bottom: 1px solid black;
+    display: block;
+    margin-bottom: 5px;
 }
