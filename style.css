@@ -85,6 +85,27 @@ img {
     height: auto;
 }
 
+a:link,
+a:visited {
+    color: inherit;
+    text-decoration: none;
+    text-underline-offset: 0.24em;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.button:link,
+.button:visited {
+    text-decoration: underline;
+    color: black;
+}
+
+.button:hover {
+    text-decoration-color: #848484;
+}
+
 .desktop-only {
     display: none;
 }
@@ -190,9 +211,51 @@ header.fixed {
     margin-bottom: 5px;
 }
 
-.top-button {
+.top-button,
+.top-button:link,
+.top-button:visited {
     position: fixed;
     bottom: 3rem;
-    right: 3rem;
+    right: -8rem;
     z-index: 1;
+    transform: rotate(270deg);
+    transform-origin: left;
+    color: #888
+}
+
+.fixed-sidebar {
+    position: fixed;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 3rem 7rem;
+    display: none;
+}
+
+.close-button {
+    width: 19px;
+    height: 19px;
+    background-color: transparent;
+    border: none;
+    position: relative;
+}
+
+.close-button::before,
+.close-button::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: black;
+}
+
+.close-button::before {
+    transform: rotate(45deg);
+}
+
+.close-button::after {
+    transform: rotate(-45deg);
 }
