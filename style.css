@@ -85,6 +85,11 @@ img {
     height: auto;
 }
 
+::selection {
+    background-color: black;
+    color: white;
+}
+
 a:link,
 a:visited {
     color: inherit;
@@ -129,7 +134,7 @@ a:hover {
 }
 
 .banner--large {
-    height: calc(100vh - 100px);
+    height: calc(50vh - 100px);
 }
 
 .banner__dark-bg {
@@ -175,16 +180,27 @@ h1.banner__heading {
 }
 
 .menu__link {
-    padding: 0.333em 0;
+    padding: 0.333em 0.9em;
     display: inline-block;
     font-size: 1.5rem;
     line-height: 1.8em;
+}
+
+.menu--horizontal .menu__list {
+    display: flex;
+    gap: 8px;
 }
 
 .header-main {
     background-color: white;
     bottom: auto;
     padding: 3.6rem 0;
+}
+
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header.fixed {
@@ -209,6 +225,10 @@ header.fixed {
     border-bottom: 1px solid black;
     display: block;
     margin-bottom: 5px;
+}
+
+.burger-menu__line:last-child {
+    margin-bottom: 0;
 }
 
 .top-button,
@@ -258,4 +278,26 @@ header.fixed {
 
 .close-button::after {
     transform: rotate(-45deg);
+}
+
+.product-grid {
+    display: grid;
+}
+
+@media screen and (min-width:640px) {
+    .product-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width:1025px) {
+    .small-screen-only {
+        display: none;
+    }
+    .desktop-only {
+        display: block;
+    }
+    .banner--large {
+        height: calc(100vh - 100px);
+    }
 }
