@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 * {
     margin: 0;
     padding: 0;
@@ -30,6 +37,22 @@ body {
 
  :-ms-input-placeholder {
     /* Internet Explorer 10-11 */
+    font-family: 'Inconsolata', monospace;
+}
+
+input::-webkit-input-placeholder {
+    font-family: 'Inconsolata', monospace;
+}
+
+input::-moz-placeholder {
+    font-family: 'Inconsolata', monospace;
+}
+
+input:-ms-input-placeholder {
+    font-family: 'Inconsolata', monospace;
+}
+
+input::-ms-input-placeholder {
     font-family: 'Inconsolata', monospace;
 }
 
@@ -85,6 +108,11 @@ img {
     height: auto;
 }
 
+::-moz-selection {
+    background-color: black;
+    color: white;
+}
+
 ::selection {
     background-color: black;
     color: white;
@@ -108,6 +136,7 @@ a:hover {
 }
 
 .button:hover {
+    -webkit-text-decoration-color: #848484;
     text-decoration-color: #848484;
 }
 
@@ -131,10 +160,36 @@ a:hover {
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #d5c6c1;
+    display: flex;
+    align-items: center;
+    padding: 5rem;
+    position: relative;
 }
 
 .banner--large {
-    height: calc(50vh - 100px);
+    min-height: calc(50vh - 100px);
+}
+
+.banner__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+}
+
+.banner__container {
+    width: 100%;
+    max-width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 18%;
+}
+
+.banner:not(.banner--large) .banner__container {
+    margin-top: 0;
 }
 
 .banner__dark-bg {
@@ -281,11 +336,13 @@ header.fixed {
 }
 
 .product-grid {
+    display: -ms-grid;
     display: grid;
 }
 
 @media screen and (min-width:640px) {
     .product-grid {
+        -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     }
 }
@@ -298,6 +355,6 @@ header.fixed {
         display: block;
     }
     .banner--large {
-        height: calc(100vh - 100px);
+        min-height: calc(100vh - 100px);
     }
 }
