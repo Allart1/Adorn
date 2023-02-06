@@ -140,16 +140,57 @@ a:hover {
     text-decoration-color: #848484;
 }
 
+input {
+    line-height: 43px;
+    border: 1px solid #848484;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+input[type="submit"] {
+    width: 4.8rem;
+    line-height: 48px;
+    height: 45px;
+    background-color: black;
+    color: white;
+    border-color: black;
+}
+
 .desktop-only {
     display: none;
 }
 
 .container {
-    max-width: 173rem px;
+    max-width: 173rem;
     margin-left: auto;
     margin-right: auto;
     /* siin võiks olla selle asemel ka padding left 1px ja padding right 15px */
     padding: 0 1.5rem;
+}
+
+.container--sm {
+    max-width: 52.3rem;
+    background-color: red;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.flex-row {
+    display: flex;
+}
+
+form .flex-row {
+    gap: 0.5em;
+}
+
+form .column:first-child {
+    flex-basis: 100%;
+}
+
+.subscription input[type="email"] {
+    width: 100%;
 }
 
 .banner {
@@ -221,6 +262,10 @@ h1.banner__heading {
     top: 0;
     right: 0;
     left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 
