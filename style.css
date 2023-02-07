@@ -168,13 +168,30 @@ input[type="submit"] {
     padding: 0 1.5rem;
 }
 
+.container--medium {
+    max-width: 130rem;
+}
+
 .container--sm {
     max-width: 52.3rem;
-    background-color: red;
+}
+
+.textblock {
+    max-width: 98.4rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .text-align-center {
     text-align: center;
+}
+
+.padding {
+    padding: 7.5rem 0 4.3rem;
+}
+
+.smpadding {
+    padding: 2.5rem 0 2.5rem;
 }
 
 .flex-row {
@@ -233,6 +250,14 @@ form .column:first-child {
     margin-top: 0;
 }
 
+.border-top {
+    border-top: 1px solid gray;
+}
+
+.graybg {
+    background-color: #f9f9f9;
+}
+
 .banner__dark-bg {
     color: white;
 }
@@ -248,8 +273,6 @@ h1.banner__heading {
 }
 
 .thumbnail {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
     /* thumbnailile määran position realative, et thumbnail __hover position absolutega jääks sinna kinni */
     position: relative;
 }
@@ -266,6 +289,12 @@ h1.banner__heading {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    opacity: 0;
+    transition: 0.6s opacity ease;
+}
+
+.thumbnail:hover .thumbanil__hover {
+    opacity: 1;
 }
 
 
@@ -273,6 +302,11 @@ h1.banner__heading {
 
 .thumbnail__img {
     display: block;
+    transition: 0.6s transform ease;
+}
+
+.thumbnail:hover .thumbnail__img {
+    transform: scale(0.95);
 }
 
 .menu__list {
@@ -280,10 +314,14 @@ h1.banner__heading {
 }
 
 .menu__link {
-    padding: 0.333em 0.9em;
+    padding: 0.133em 0;
     display: inline-block;
     font-size: 1.5rem;
     line-height: 1.8em;
+}
+
+.menu--horizontal .menu__link {
+    padding: 0.333em 0.9em;
 }
 
 .menu--horizontal .menu__list {
@@ -297,7 +335,8 @@ h1.banner__heading {
     padding: 3.6rem 0;
 }
 
-.header-row {
+.header-row,
+.footer-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -383,12 +422,22 @@ header.fixed {
 .product-grid {
     display: -ms-grid;
     display: grid;
+    gap: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
 @media screen and (min-width:640px) {
     .product-grid {
         -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width:900px) {
+    .product-grid {
+        -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
 
