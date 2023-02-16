@@ -1,3 +1,4 @@
+// Kui dokument on valmis siis teen kõi htmli elementidega seotud asjad siin
 jQuery(document).ready(function() {
 
     jQuery(".burger-menu").click(function() {
