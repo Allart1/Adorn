@@ -19,10 +19,27 @@ jQuery(document).ready(function() {
         jQuery(this).children(".menu__dropdown").stop().slideToggle();
     });
 
+
+    // Teen muutuja, et hiljem salvestada scrollimis kõrgus 
+    var kui_korgel;
+    // Teen muutuja, mis salvestab kui kõrgel on #activate-fixed-header seaktsioon ülevalt(offset().top)
+    var activateFixedHeader = jQuery("#activate-fixed-header").offset().top;
+    console.log(activateFixedHeader);
     // inimene scrollib lehel 
     jQuery(window).scroll(function(event) {
+        // Salvestan kasutaja kõrguse selle akna suhtes
+        kui_korgel = jQuery(this).scrollTop();
 
-        jQuery("header.fixed").slideDown();
+
+
+        // kontrollin, kui kõrgel on kasutaja võrreldes minu valitud sektsiooni kõrgusega
+        // Kui inimene on konkreetsest kõrgusest allpool siis fikseeritud päis tuleb nähtavaks, muidu peidus
+        if (kui_korgel > activateFixedHeader) {
+            jQuery("header.fixed").slideDown();
+
+        } else {
+            jQuery("header.fixed").slideUp();
+        }
 
 
 
